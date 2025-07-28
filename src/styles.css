@@ -1,0 +1,166 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* @use "tailwindcss"; */
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: rgb(4, 4, 89);
+    --light-color: white;
+    --font-family: "Encode Sans Expanded", sans-serif;
+    --rating-color: #ffc908;
+}
+
+.container {
+    width: 95%;
+    margin-inline: auto;
+    /* background-color: aqua; */
+}
+
+.card {
+    overflow: hidden;
+}
+
+.rating i {
+    color: var(--rating-color);
+    margin-right: 5px;
+}
+
+button {
+    padding: 5px;
+    margin: 0 5px 5px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-style: none;
+    background-color: #ae3611;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+/* For Home, Products section */
+.products {
+    padding-block: 80px;
+}
+
+.products h2 {
+    font-size: 30px;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.products .card {
+    width: 25%;
+    padding: 10px 5px;
+}
+
+.products .card-container {
+    border: 1px solid var(--main-color);
+    height: 330px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.products .card .img-card {
+    width: 50%;
+    margin: 5px auto 120px;
+    margin-inline: auto;
+    margin-bottom: 100px;
+}
+
+.card .img-card img {
+    width: 100%;
+
+}
+
+.products .card .caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 25px;
+    right: 0;
+    left: 0;
+    padding: 10px;
+}
+
+.card .caption h3 {
+    font-size: 18px;
+    color: var(--main-color);
+}
+
+
+.card button {
+    padding: 5px;
+    margin: 0 5px 5px;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+    border-style: none;
+    background-color: #f36b41;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.select {
+    width: 20%;
+    padding: 10px;
+    margin-left: 10px;
+    border: 2px solid #f36b41;
+}
+
+
+@media screen and (max-width:767px) {
+    .products .card {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .products .card {
+        width: 100%;
+    }
+
+    .products .card .img-card {
+        margin: 2px auto 0px;
+        width: 25%;
+    }
+}
+
+/* For Home, Products section */
+
+.search {
+    width: 50%;
+    margin: 20px auto;
+    padding: 15px;
+    border-color: var(--main-color);
+    border-radius: 10px;
+
+}
