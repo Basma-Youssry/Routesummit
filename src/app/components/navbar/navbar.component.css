@@ -1,0 +1,54 @@
+
+.nav-bar{
+    background-color: rgba(225, 144, 78, 0.8);
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-img{
+    width: 8%;
+
+}
+.nav-img img{
+    width: 100%;
+}
+nav{
+    width: 20%;
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+nav ul a{
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--main-color);
+}
+.nav-bar .cart{
+    width: 4%;
+}
+.nav-bar .cart img{
+    width: 100%;
+}
+
+
+
+@media screen and (max-width: 767px){
+    nav{
+    width: 35%;
+    }
+    nav ul a{
+    font-size: 16px;
+}
+}

@@ -1,0 +1,47 @@
+<app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
+
+<div *ngIf="!isLoading">
+    <!-- Start Header section -->
+    <section class="products">
+        <div class="container">
+            <input class="search" type="search" placeholder="Search..." [(ngModel)]="searchTerm" />
+
+            <select class="select" [(ngModel)]="selectedSort" (change)="sortProducts()">
+                <option value="">Sort By</option>
+                <option value="priceLowToHigh">Price: Low to High</option>
+                <option value="priceHighToLow">Price: High to Low</option>
+                <option value="nameAZ">Name: A–Z</option>
+            </select>
+            <div *ngIf="products.length">
+                <div class="cards">
+                    <div class="card" *ngFor="let item of products | search : searchTerm">
+                        <div class="card-container">
+                            <div [routerLink]="['/details', item.id]">
+                                <div class="img-card">
+                                    <img [src]="item.image" alt="random products">
+                                </div>
+
+                                <div class="caption">
+                                    <h3>{{item.title.split(' ').slice(0,2).join()}}</h3>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <span>{{item.rating.rate}}</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <button>Add Product</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- empty states -->
+            <div *ngIf="products.length === 0">
+                No products found.
+            </div>
+        </div>
+    </section>
+    <!-- End Header section -->
+</div>
